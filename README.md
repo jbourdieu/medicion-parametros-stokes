@@ -1,4 +1,4 @@
-##STOKES-medir-calcular.py##
+**STOKES-medir-calcular.py**
 
 Para medir el estado de polarización de un haz polarizado, es necesario propagar el haz a través de una lámina de cuarto de onda rotante, luego a través de un polarizador y, por último, adquirir la intensidad del haz a la salida del polarizador en función de la posición angular de la lámina de cuarto de onda. Para obtener información completa sobre la polarización, la lámina de cuarto de onda debe rotarse un total de 180º.
 
@@ -6,7 +6,7 @@ El programa STOKES-medir-calcular.py, desarrollado en Python, está diseñado pa
 
 Los archivos medicion_PRUEBA01_27032023.png, medicion_PRUEBA01_27032023-analisis, medicion_PRUEBA01_27032023-elipse.png, medicion_PRUEBA01_27032023-esfera.png y medicion_PRUEBA01_27032023-osci son un ejemplo de los archivos que devuelve el programa. 
 
-##RECOMENDACIONES IMPORTANTES PARA EL USO DEL PROGRAMA##
+**RECOMENDACIONES IMPORTANTES PARA EL USO DEL PROGRAMA**
 
 El archivo del progrma siempre debe estar en la misma carpeta que coeficientes_ABCD_y_error.py, EsferaElipse.py, scope_simple_plot.py y stokes.py. 
 
