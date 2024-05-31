@@ -1,14 +1,6 @@
-El programa STOKES-medir-calcular mide la polarización de un haz polarizado y calcula los parámetros de stokes 
-y de la esfera de Poincaré.
+Para medir el estado de polarización de un haz polarizado, es necesario propagar el haz a través de una lámina de cuarto de onda rotante, luego a través de un polarizador y, por último, adquirir la intensidad del haz a la salida del polarizador en función de la posición angular de la lámina de cuarto de onda. Para obtener información completa sobre la polarización, la lámina de cuarto de onda debe rotarse un total de 180º.
+El programa STOKES-medir-calcular.py, desarrollado en Python, está diseñado para medir el estado de polarización de un haz polarizado de manera completamente automatizada. Este programa se encarga de rotar una lámina de cuarto de onda desde 0º hasta 180º con pasos de 2º montada sobre un motor rotador Zaber. En cada ángulo de rotación, registra la intensidad de la señal a través de un osciloscopio Tektronix utilizando el programa auxiliar scope_simple_plot.py de autoría propia. El programa devuelve un archivo de texto llamado {nombre}-osci, que contiene la posición angular de la lámina con su error, el voltaje medio registrado en el osciloscopio y la desviación estándar del voltaje medio. Luego, se obtiene el estado de polarización calculando los parámetros de Stokes y los parámetros de la elipse de polarización con sus respectivos errores y guarda la información en un archivo de texto llamado {nombre}-analisis. Para esto, se utiliza los programas auxiliares stokes.py, coeficientes_ABCD_y_error.py y EsferaElipse.py de autoría propia. Además, se generan y se guardan los gráficos de la elipse de polarización y la esfera de Poincaré.
 
-Para medir la polarización se debe propagar el haz, primero, a través de una lámina de cuarto de onda rotante, luego a traves de un polarizador analizador.
-Finalmente, se adquiere la intensidad del haz a la salida del polarizador en función de la posición angular de la lámina de cuarto de onda. 
-Para alinear el polarizador se debe quitar la lámina de cuarto de onda y luego rotar al analizador hasta que se tenga la máxima transmisión posible. 
-Para obtener la información completa de la polarización es necesario que la lámina de onda se rote un total 180 grados.
-
-El programa se encarga de rotar la lámina de cuarto de onda desde 0 a 180 grados con pasos de 2 grados y, por cada ángulo que rota, de medir la intensidad de la señal a través del osciloscopio.
-Por un lado, el programa devuelve un archivo de texto llamado {nombre} con: el valor de los ángulos, el error en la posicion del angulo, el voltaje medio leído en el osciloscopio y la desviasión estándar del voltaje medio. También, genera y guarda el gráfico de la intensidad de la señal en funcion del ángulo de la lámina de onda. 
-Por el otro lado, el programa calcula los parámetros de Stokes y los ángulos de elipticidad (chi) y de orientación (psi) de la elipse con sus respectivos errores. Esta información seguarda en un archivo de texto llamado {nombre}-analisis y también se generan y guardan los graficos de la elipse de polarización y la esfera de Poincaré. 
 
 RECOMENDACIONES IMPORTANTES PARA EL USO DEL PROGRAMA
 
